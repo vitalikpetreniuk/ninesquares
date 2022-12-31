@@ -58,7 +58,6 @@ function initSlickSlider() {
 function initSlickSliderCenter() {
 	$('.about_section-slider-list').slick({
 		centerMode: true,
-		centerPadding: '0px',
 		infinite: false,
 		slidesToShow: 3,
 		variableWidth: true,
@@ -68,7 +67,6 @@ function initSlickSliderCenter() {
 				breakpoint: 1024,
 				settings: {
 					centerMode: true,
-					centerPadding: '0px',
 					slidesToShow: 2,
 					slidesToScroll: 1
 				}
@@ -77,8 +75,8 @@ function initSlickSliderCenter() {
 				breakpoint: 768,
 				settings: {
 					centerMode: true,
-					centerPadding: '0px',
 					infinite: true,
+					centerPadding: '0px',
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
