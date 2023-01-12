@@ -4,9 +4,10 @@ $(function() {
 	initMobileNav();
 	initSlickSlider();
 	initSlickSliderCenter();
-	initSlickSlider2();
+	initSlickSliderProduct();
 	initTabs();
 	initAccordion();
+	initOpenDropCategoryFilter();
 });
 
 function initFixedHeader() {
@@ -84,20 +85,24 @@ function initSlickSliderCenter() {
 		]
 	});
 }
-function initSlickSlider2() {
-	$('.goods-list-slider').slick({
-		slidesToShow: 5,
+function initSlickSliderProduct() {
+	$('.slider-for').slick({
+		slidesToShow: 1,
 		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		fade: true,
+		adaptiveHeight: true,
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
 		arrows: true,
 		dots: false,
+		focusOnSelect: true,
 		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 1
-				}
-			},
 			{
 				breakpoint: 1024,
 				settings: {
@@ -150,3 +155,15 @@ function initAccordion(){
     return false;
   });
 }
+function initOpenDropCategoryFilter(){
+  $(document).click(function(event) {
+    if ($(event.target).closest(".categories-list-menu").length) return;
+      $('.expanded-opener').removeClass('active');
+      $(".categories-list-menu").removeClass('open');
+      event.stopPropagation();
+  });
+  $('.expanded-opener').on('click', function() {
+    $(this).toggleClass('active').siblings('.categories-list-menu').toggleClass('open');
+    return false;
+  });
+};
