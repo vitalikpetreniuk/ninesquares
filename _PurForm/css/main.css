@@ -2476,9 +2476,17 @@ section{
 .column-border-list .text{
 	padding: 23px 20px;
 	border-bottom: 1px solid #C5C5C5;
+	position: relative;
 }
 .column-border-list .text:first-child{
 	border-top: 1px solid #C5C5C5;
+}
+.column-border-list .text .add-something{
+	position: absolute;
+	top: 18px;
+	right: 3px;
+	color: #567982;
+	font: 100 42px/18px Grammatika;
 }
 .column-border-list h3{
 	font: 500 16px/18px Grammatika;
@@ -3950,7 +3958,9 @@ section{
   .promo-section.last .image-first-mobile{
   	order: -1;
   }
+  .doctor-section,
   .doctor-section:first-child{
+  	background: #fff;
   	padding: 175px 0 67px;
   }
   .doctor-section .comment-block .image{
@@ -3966,7 +3976,14 @@ section{
   	width: 50%;
   	padding: 19px 10px;
   }
+  .partners-list li img{
+  	max-height: 70px;
+  }
+  .doctor-section + .learn-more-section{
+  	padding-top: 0;
+  }
   .learn-more-section{
+  	background: #fff;
   	padding: 74px 0 50px;
   }
   .learn-more-section .top-title {
@@ -4140,6 +4157,10 @@ section{
   }
   .category-filter .form-search.open .search{
   	width: 293px;
+  }
+  .categories-list .categories-list-menu{
+  	right: auto;
+  	left: 0;
   }
 	.footer-sections {
 	  padding: 74px 0 0;
